@@ -10,7 +10,7 @@ from .tickets import validate_note_author, validate_note_message
 def _note_number(note_id) -> int:
     raw = str(note_id)
     return int(raw[1:]) if raw.startswith("N") and raw[1:].isdigit() else 0
-
+   
 
 def next_note_id(ticket) -> str:
     """Return the next free note ID for this ticket (N001 for a ticket with no notes)."""
